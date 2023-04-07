@@ -1,6 +1,3 @@
-Original App Design Project - README Template
-===
-
 # GPTalk
 
 ## Table of Contents
@@ -125,9 +122,7 @@ GPTalk is a messaging app that allows the user to converse with ChatGPT in the m
 <img src="wireframe.png" width=600>
 <img src="wireframe2.png" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
 
-### [BONUS] Interactive Prototype
 
 ## Schema 
 [This section will be completed in Unit 9]
