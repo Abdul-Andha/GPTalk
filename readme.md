@@ -44,15 +44,15 @@ GPTalk is a messaging app that allows the user to converse with ChatGPT in the m
 
 **Optional Nice-to-have Stories**
 * Calling / Video Calling
-*A separate tab that shows recent calls / missed calls 
+* A separate tab that shows recent calls / missed calls 
 * Sending location
-*Having customizability, profile change/background color change
-*Profile picture
-*Blocking functionality
-*Showing a status / showing a story 
-*Add gifs 
-*Pinned messages 
-*Send voice messages
+* Having customizability, profile change/background color change
+* Profile picture
+* Blocking functionality
+* Showing a status / showing a story 
+* Add gifs 
+* Pinned messages 
+* Send voice messages
 * Email subscription/verifying email
 
 ### 2. Screen Archetypes
