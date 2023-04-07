@@ -14,7 +14,7 @@ Original App Design Project - README Template
 GPTalk is a messaging app that allows the user to converse with ChatGPT in the middle of their conversations utilizing the OpenAI API. 
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
+
 - **Category:** Messaging
 - **Mobile:** A messaging app, it can send notifications, allows the user to take pictures, can take calls/video calls, can send location
 - **Story:** With the rise of ChatGPT and its added functionalities that allows people to become more productive than other, we are providing our users with the ability to ask GPT questions within conversations without having to go through the online website and allow multiple users to ask GPT within the same session. 
@@ -122,7 +122,8 @@ GPTalk is a messaging app that allows the user to converse with ChatGPT in the m
 
 ## Wireframes
 
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="wireframe.png" width=600>
+<img src="wireframe2.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
