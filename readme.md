@@ -15,12 +15,12 @@ GPTalk is a messaging app that allows the user to converse with ChatGPT in the m
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category: Messaging**
-- **Mobile: A messaging app, it can send notifications, allows the user to take pictures, can take calls/video calls, can send location**
-- **Story: With the rise of ChatGPT and its added functionalities that allows people to become more productive than other, we are providing our users with the ability to ask GPT questions within conversations without having to go through the online website and allow multiple users to ask GPT within the same session. **
-- **Market: Includes both casual users, as well as corporal level associates where they can use GPT to allow their meetings and conversations to be more productive and efficient**
-- **Habit: People will return to the app to continue their conversations both with GPT itself as well as with their friends/ business co-workers. **
-- **Scope: The integration of GPT is interesting, as well as the calling/messaging functionality of the application will be fairly technical and will continue to make the project interesting for both ourselves as well as future admirers**
+- **Category:** Messaging
+- **Mobile:** A messaging app, it can send notifications, allows the user to take pictures, can take calls/video calls, can send location
+- **Story:** With the rise of ChatGPT and its added functionalities that allows people to become more productive than other, we are providing our users with the ability to ask GPT questions within conversations without having to go through the online website and allow multiple users to ask GPT within the same session. 
+- **Market:** Includes both casual users, as well as corporal level associates where they can use GPT to allow their meetings and conversations to be more productive and efficient
+- **Habit:** People will return to the app to continue their conversations both with GPT itself as well as with their friends/ business co-workers.
+- **Scope:** The integration of GPT is interesting, as well as the calling/messaging functionality of the application will be fairly technical and will continue to make the project interesting for both ourselves as well as future admirers
 
 ## Product Spec
 
