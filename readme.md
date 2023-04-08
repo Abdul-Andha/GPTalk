@@ -96,24 +96,24 @@ GPTalk is a messaging app that allows the user to converse with ChatGPT in the m
 
 **Flow Navigation** (Screen to Screen)
 * Log In
-=> Sign Up
-=> Main Chat Navigation
-=> Forgot Password Screen
+	* Sign Up
+	* Main Chat Navigation
+	* Forgot Password Screen
 
 * Forgot Password Screen
-=> Log In
+	* Log In
 
 * Sign Up
-=> Log In
-=> Main Chat Navigation
+	* Log In
+	* Main Chat Navigation
 
 *  Main Chat Navigation 
-=> Chat Screen
-=> Log in (logout button)
+	* Chat Screen
+	* Log in (logout button)
 	* Call tab
 
 * Chat Screen
-=> Main Chat Navigation
+	* Main Chat Navigation
 
 
 
