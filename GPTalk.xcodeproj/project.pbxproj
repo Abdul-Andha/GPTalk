@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A0A04DB029E9E68900E53E7C /* Inter-VariableFont_slnt,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0A04DAF29E9E68900E53E7C /* Inter-VariableFont_slnt,wght.ttf */; };
+		A0A04DB029E9E68900E53E7C /* Inter in Resources */ = {isa = PBXBuildFile; fileRef = A0A04DAF29E9E68900E53E7C /* Inter */; };
 		A0A04DB229E9E95600E53E7C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A04DB129E9E95600E53E7C /* SignUpViewController.swift */; };
 		A0A04DB429E9E96B00E53E7C /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A04DB329E9E96B00E53E7C /* ForgotPasswordViewController.swift */; };
 		A0A04DB829E9ED9300E53E7C /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A0A04DB729E9ED9300E53E7C /* ParseSwift */; };
 		A0D3C32329E9F4D700790A35 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D3C32229E9F4D700790A35 /* Users.swift */; };
+		BF3C384229EAF719009F3454 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3C384129EAF719009F3454 /* Messages.swift */; };
+		BF3C384729EB1C64009F3454 /* ChatNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3C384629EB1C64009F3454 /* ChatNavViewController.swift */; };
+		BF3C384929EB26FA009F3454 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3C384829EB26FA009F3454 /* MessageCell.swift */; };
+		BF3C384C29EB27FF009F3454 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BF3C384B29EB27FF009F3454 /* Alamofire */; };
+		BF3C384F29EB280B009F3454 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = BF3C384E29EB280B009F3454 /* AlamofireImage */; };
 		F46D346B29E89C4C00E34C9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D346A29E89C4C00E34C9F /* AppDelegate.swift */; };
 		F46D346D29E89C4C00E34C9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D346C29E89C4C00E34C9F /* SceneDelegate.swift */; };
 		F46D346F29E89C4C00E34C9F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D346E29E89C4C00E34C9F /* LoginViewController.swift */; };
@@ -21,10 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A0A04DAF29E9E68900E53E7C /* Inter-VariableFont_slnt,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-VariableFont_slnt,wght.ttf"; path = "../../../../../Downloads/Inter/Inter-VariableFont_slnt,wght.ttf"; sourceTree = "<group>"; };
+		A0A04DAF29E9E68900E53E7C /* Inter */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Inter; path = ../Inter; sourceTree = "<group>"; };
 		A0A04DB129E9E95600E53E7C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A0A04DB329E9E96B00E53E7C /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		A0D3C32229E9F4D700790A35 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		BF3C384129EAF719009F3454 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		BF3C384629EB1C64009F3454 /* ChatNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNavViewController.swift; sourceTree = "<group>"; };
+		BF3C384829EB26FA009F3454 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		F46D346729E89C4C00E34C9F /* GPTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46D346A29E89C4C00E34C9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F46D346C29E89C4C00E34C9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +49,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0A04DB829E9ED9300E53E7C /* ParseSwift in Frameworks */,
+				BF3C384C29EB27FF009F3454 /* Alamofire in Frameworks */,
+				BF3C384F29EB280B009F3454 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,8 +71,18 @@
 			isa = PBXGroup;
 			children = (
 				A0D3C32229E9F4D700790A35 /* Users.swift */,
+				BF3C384129EAF719009F3454 /* Messages.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BF3C384329EAF745009F3454 /* MainChatNav */ = {
+			isa = PBXGroup;
+			children = (
+				BF3C384629EB1C64009F3454 /* ChatNavViewController.swift */,
+				BF3C384829EB26FA009F3454 /* MessageCell.swift */,
+			);
+			path = MainChatNav;
 			sourceTree = "<group>";
 		};
 		F46D345E29E89C4C00E34C9F = {
@@ -88,8 +108,9 @@
 				F46D346A29E89C4C00E34C9F /* AppDelegate.swift */,
 				F46D346C29E89C4C00E34C9F /* SceneDelegate.swift */,
 				A0A04DB529E9E99200E53E7C /* Login */,
+				BF3C384329EAF745009F3454 /* MainChatNav */,
 				F46D347029E89C4C00E34C9F /* Main.storyboard */,
-				A0A04DAF29E9E68900E53E7C /* Inter-VariableFont_slnt,wght.ttf */,
+				A0A04DAF29E9E68900E53E7C /* Inter */,
 				F46D347329E89C4E00E34C9F /* Assets.xcassets */,
 				F46D347529E89C4E00E34C9F /* LaunchScreen.storyboard */,
 				F46D347829E89C4E00E34C9F /* Info.plist */,
@@ -115,6 +136,8 @@
 			name = GPTalk;
 			packageProductDependencies = (
 				A0A04DB729E9ED9300E53E7C /* ParseSwift */,
+				BF3C384B29EB27FF009F3454 /* Alamofire */,
+				BF3C384E29EB280B009F3454 /* AlamofireImage */,
 			);
 			productName = GPTalk;
 			productReference = F46D346729E89C4C00E34C9F /* GPTalk.app */;
@@ -146,6 +169,8 @@
 			mainGroup = F46D345E29E89C4C00E34C9F;
 			packageReferences = (
 				A0A04DB629E9ED9300E53E7C /* XCRemoteSwiftPackageReference "Parse-Swift" */,
+				BF3C384A29EB27FF009F3454 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BF3C384D29EB280B009F3454 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = F46D346829E89C4C00E34C9F /* Products */;
 			projectDirPath = "";
@@ -161,7 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0A04DB029E9E68900E53E7C /* Inter-VariableFont_slnt,wght.ttf in Resources */,
+				A0A04DB029E9E68900E53E7C /* Inter in Resources */,
 				F46D347729E89C4E00E34C9F /* LaunchScreen.storyboard in Resources */,
 				F46D347429E89C4E00E34C9F /* Assets.xcassets in Resources */,
 				F46D347229E89C4C00E34C9F /* Main.storyboard in Resources */,
@@ -177,10 +202,13 @@
 			files = (
 				F46D346F29E89C4C00E34C9F /* LoginViewController.swift in Sources */,
 				A0A04DB429E9E96B00E53E7C /* ForgotPasswordViewController.swift in Sources */,
+				BF3C384729EB1C64009F3454 /* ChatNavViewController.swift in Sources */,
 				F46D346B29E89C4C00E34C9F /* AppDelegate.swift in Sources */,
+				BF3C384229EAF719009F3454 /* Messages.swift in Sources */,
 				A0A04DB229E9E95600E53E7C /* SignUpViewController.swift in Sources */,
 				A0D3C32329E9F4D700790A35 /* Users.swift in Sources */,
 				F46D346D29E89C4C00E34C9F /* SceneDelegate.swift in Sources */,
+				BF3C384929EB26FA009F3454 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +436,22 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		BF3C384A29EB27FF009F3454 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		BF3C384D29EB280B009F3454 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -415,6 +459,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A0A04DB629E9ED9300E53E7C /* XCRemoteSwiftPackageReference "Parse-Swift" */;
 			productName = ParseSwift;
+		};
+		BF3C384B29EB27FF009F3454 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF3C384A29EB27FF009F3454 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		BF3C384E29EB280B009F3454 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF3C384D29EB280B009F3454 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
