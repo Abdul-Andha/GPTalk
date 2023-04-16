@@ -23,6 +23,8 @@
 		F46D347229E89C4C00E34C9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46D347029E89C4C00E34C9F /* Main.storyboard */; };
 		F46D347429E89C4E00E34C9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F46D347329E89C4E00E34C9F /* Assets.xcassets */; };
 		F46D347729E89C4E00E34C9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46D347529E89C4E00E34C9F /* LaunchScreen.storyboard */; };
+		F46D34A929EC7E3400E34C9F /* StreamChat in Frameworks */ = {isa = PBXBuildFile; productRef = F46D34A829EC7E3400E34C9F /* StreamChat */; };
+		F46D34AB29EC7E3400E34C9F /* StreamChatUI in Frameworks */ = {isa = PBXBuildFile; productRef = F46D34AA29EC7E3400E34C9F /* StreamChatUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +51,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0A04DB829E9ED9300E53E7C /* ParseSwift in Frameworks */,
+				F46D34AB29EC7E3400E34C9F /* StreamChatUI in Frameworks */,
 				BF3C384C29EB27FF009F3454 /* Alamofire in Frameworks */,
+				F46D34A929EC7E3400E34C9F /* StreamChat in Frameworks */,
 				BF3C384F29EB280B009F3454 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +142,8 @@
 				A0A04DB729E9ED9300E53E7C /* ParseSwift */,
 				BF3C384B29EB27FF009F3454 /* Alamofire */,
 				BF3C384E29EB280B009F3454 /* AlamofireImage */,
+				F46D34A829EC7E3400E34C9F /* StreamChat */,
+				F46D34AA29EC7E3400E34C9F /* StreamChatUI */,
 			);
 			productName = GPTalk;
 			productReference = F46D346729E89C4C00E34C9F /* GPTalk.app */;
@@ -171,6 +177,7 @@
 				A0A04DB629E9ED9300E53E7C /* XCRemoteSwiftPackageReference "Parse-Swift" */,
 				BF3C384A29EB27FF009F3454 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				BF3C384D29EB280B009F3454 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				F46D34A729EC7E3400E34C9F /* XCRemoteSwiftPackageReference "stream-chat-swift" */,
 			);
 			productRefGroup = F46D346829E89C4C00E34C9F /* Products */;
 			projectDirPath = "";
@@ -452,6 +459,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		F46D34A729EC7E3400E34C9F /* XCRemoteSwiftPackageReference "stream-chat-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getstream/stream-chat-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -469,6 +484,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BF3C384D29EB280B009F3454 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
 			productName = AlamofireImage;
+		};
+		F46D34A829EC7E3400E34C9F /* StreamChat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F46D34A729EC7E3400E34C9F /* XCRemoteSwiftPackageReference "stream-chat-swift" */;
+			productName = StreamChat;
+		};
+		F46D34AA29EC7E3400E34C9F /* StreamChatUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F46D34A729EC7E3400E34C9F /* XCRemoteSwiftPackageReference "stream-chat-swift" */;
+			productName = StreamChatUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

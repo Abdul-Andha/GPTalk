@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
                 print("✅ Successfully logged in as user: \(user)")
 
                 // Post a notification that the user has successfully logged in.
-                NotificationCenter.default.post(name: Notification.Name("login"), object: nil)
+                NotificationCenter.default.post(name: Notification.Name("login"), object: nil, userInfo: ["username": username])
 
             case .failure(let error):
                 self?.showAlert(description: error.localizedDescription)
