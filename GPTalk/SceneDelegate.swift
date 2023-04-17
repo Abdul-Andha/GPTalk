@@ -2,14 +2,15 @@
 //  SceneDelegate.swift
 //  GPTalk
 //
-//  Created by Abdul Andha on 4/13/23.
+//  Created by Abdul Andha/Hector Merejo on 4/13/23.
 //
 
 import UIKit
 import StreamChat
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-    private enum Constants {
+    
+    public enum Constants {
         static let loginNavigationControllerIdentifier = "LoginNavigationController"
         static let feedNavigationControllerIdentifier = "FeedNavigationController"
         static let storyboardIdentifier = "Main"
