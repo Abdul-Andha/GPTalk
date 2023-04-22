@@ -45,7 +45,7 @@ class MainChatNav: ChatChannelListVC {
             }
             // TODO: Create a new chat with the specified user
             print("Creating chat with user \(username)")
-            
+                
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         alertController.addAction(createAction)
@@ -93,11 +93,11 @@ class MainChatNav: ChatChannelListVC {
                         print(error)
                     }
                 }
+                
 //                MARK: Use as a reference on how to print a list of all users
                 let controller = ChatClient.shared.userListController(
                     query: .init()
                 )
-
                 controller.synchronize { error in
                     if let error = error {
                         // handle error
