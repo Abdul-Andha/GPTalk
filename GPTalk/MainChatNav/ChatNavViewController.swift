@@ -15,10 +15,7 @@ class MainChatNav: ChatChannelListVC {
             super.setUpAppearance()
             title = "Chats"
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus.app.fill"), style: .plain, target: self, action: #selector(addTapped))
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "New Group Chat", style: .plain, target: self, action: #selector(addGroupChat))
-
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus.app.fill"), style: .plain, target: self, action: #selector(addChat))
 
         // Create the logout button
         let logoutButton = UIButton(type: .system)
@@ -35,101 +32,24 @@ class MainChatNav: ChatChannelListVC {
         view.addSubview(logoutButton)
     }
     
-    @objc private func addGroupChat() {
-        let alertController = UIAlertController(title: "Create Group Chat", message: "Enter the names of the users you want to add to the group chat, separated by commas.", preferredStyle: .alert)
+    @objc private func addChat() {
+        let alertController = UIAlertController(title: "Create New Chat", message: "Enter the name of the users you want to chat with. Make sure to separate multiple users by commas.", preferredStyle: .alert)
         alertController.addTextField { textField in
-            textField.placeholder = "Usernames"
+            textField.placeholder = "Username(s)"
         }
         let createAction = UIAlertAction(title: "Create", style: .default) { _ in
             guard let usernames = alertController.textFields?.first?.text else {return}
 
             let participantIds = usernames.components(separatedBy: ",").map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            
             // TODO: Create a new group chat with the specified participants
             print("Creating group chat with participants \(participantIds)")
+            self.createChat(with: participantIds)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         alertController.addAction(createAction)
         alertController.addAction(cancelAction)
         present(alertController, animated: true)
-    }
-    
-    //creates username pop to start new chat
-    func showNewChatPopup() {
-        let alertController = UIAlertController(title: "New Chat", message: "Enter the name of the user you want to start a chat with.", preferredStyle: .alert)
-        alertController.addTextField { textField in
-            textField.placeholder = "Username"
-        }
-        let createAction = UIAlertAction(title: "Create", style: .default) { _ in
-            guard let username = alertController.textFields?.first?.text else {
-                return
-            }
-            // TODO: Create a new chat with the specified user
-            print("Creating chat with user \(username)")
-            
-        }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        alertController.addAction(createAction)
-        alertController.addAction(cancelAction)
-        present(alertController, animated: true)
-    }
-    
-    // functionality to create new chats. Popup whre the user can enter a name of another user to create a chat with them
-    @objc func addTapped() {
-        let alert = UIAlertController(title: "Create new chat", message: "Enter the username of the user you want to chat with", preferredStyle: .alert)
-        alert.addTextField(configurationHandler: nil)
-
-        let createAction = UIAlertAction(title: "Create", style: .default) { _ in
-            guard let username = alert.textFields?.first?.text else { return }
-            self.createChat(with: username)
-        }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-
-        alert.addAction(createAction)
-        alert.addAction(cancelAction)
-
-        present(alert, animated: true)
-        
-        print("add pressed")
-    }
-
-    private func createChat(with username: String) {
-    
-//      MARK: Use as a reference on how to make channels
-//      1: Use the `ChatClient` to create a `ChatChannelController` with a list of user ids
-        let channelController = try? ChatClient.shared.channelController(
-            createDirectMessageChannelWith: [username],
-            isCurrentUserMember: true,
-            name: nil,
-            imageURL: nil,
-            extraData: ["test": "test"]
-        )
-
-//      2: Call `ChatChannelController.synchronize` to create the channel.
-        channelController!.synchronize { error in
-            if let error = error {
-                /// 4: Handle possible errors
-                print(error)
-            }
-        }
-//      MARK: Use as a reference on how to print a list of all users
-        let controller = ChatClient.shared.userListController(
-            query: .init()
-        )
-
-        controller.synchronize { error in
-            if let error = error {
-                // handle error
-                print("err")
-                print(error)
-            } else {
-                // access users
-                print("succ")
-                print(controller.users)
-                print(controller.users.forEach { user in
-                    print(user.id)
-                })
-            }
-        }
     }
     
     private func createChat(with usernames: [String]) {
@@ -152,7 +72,30 @@ class MainChatNav: ChatChannelListVC {
         }
     }
     
+    //call to print all users. useful during development. delete after.
+    func printAllUsers() {
+        let controller = ChatClient.shared.userListController(
+            query: .init()
+        )
 
+        controller.synchronize { error in
+            if let error = error {
+                // handle error
+                print("err")
+                print(error)
+            } else {
+                // access users
+                print("succ")
+                print(controller.users)
+                print(controller.users.forEach { user in
+                    print(user.id)
+                })
+            }
+        }
+    }
+    
+    
+    
     //logout button code starts here
     @objc func onLogOutTapped(_ sender: Any) {
         showConfirmLogoutAlert()
