@@ -20,6 +20,7 @@
 		F44ED0D629F43DE700DDBDDF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ED0D529F43DE700DDBDDF /* ChatViewController.swift */; };
 		F44ED0D929F445E800DDBDDF /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = F44ED0D829F445E800DDBDDF /* OpenAIKit */; };
 		F44ED0DD29F4473100DDBDDF /* .env in Resources */ = {isa = PBXBuildFile; fileRef = F44ED0DC29F4473100DDBDDF /* .env */; };
+		F44ED0E729F5B85A00DDBDDF /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ED0E629F5B85A00DDBDDF /* ChatMessage.swift */; };
 		F46D346B29E89C4C00E34C9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D346A29E89C4C00E34C9F /* AppDelegate.swift */; };
 		F46D346D29E89C4C00E34C9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D346C29E89C4C00E34C9F /* SceneDelegate.swift */; };
 		F46D346F29E89C4C00E34C9F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D346E29E89C4C00E34C9F /* LoginViewController.swift */; };
@@ -40,6 +41,7 @@
 		BF3C384829EB26FA009F3454 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		F44ED0D529F43DE700DDBDDF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F44ED0DC29F4473100DDBDDF /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		F44ED0E629F5B85A00DDBDDF /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		F46D346729E89C4C00E34C9F /* GPTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46D346A29E89C4C00E34C9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F46D346C29E89C4C00E34C9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				A0A04DB529E9E99200E53E7C /* Login */,
 				BF3C384329EAF745009F3454 /* MainChatNav */,
 				F44ED0D529F43DE700DDBDDF /* ChatViewController.swift */,
+				F44ED0E629F5B85A00DDBDDF /* ChatMessage.swift */,
 				F44ED0DC29F4473100DDBDDF /* .env */,
 				F46D347029E89C4C00E34C9F /* Main.storyboard */,
 				A0A04DAF29E9E68900E53E7C /* Inter */,
@@ -223,6 +226,7 @@
 				F44ED0D629F43DE700DDBDDF /* ChatViewController.swift in Sources */,
 				BF3C384729EB1C64009F3454 /* ChatNavViewController.swift in Sources */,
 				F46D346B29E89C4C00E34C9F /* AppDelegate.swift in Sources */,
+				F44ED0E729F5B85A00DDBDDF /* ChatMessage.swift in Sources */,
 				BF3C384229EAF719009F3454 /* Messages.swift in Sources */,
 				A0A04DB229E9E95600E53E7C /* SignUpViewController.swift in Sources */,
 				A0D3C32329E9F4D700790A35 /* Users.swift in Sources */,
