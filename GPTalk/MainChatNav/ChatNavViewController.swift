@@ -87,7 +87,6 @@ class MainChatNav: ChatChannelListVC {
             query: .init()
         )
 
-<<<<<<< HEAD
         controller.synchronize { error in
             if let error = error {
                 // handle error
@@ -102,35 +101,6 @@ class MainChatNav: ChatChannelListVC {
                 })
             }
         }
-=======
-
-                /// 2: Call `ChatChannelController.synchronize` to create the channel.
-                channelController!.synchronize { error in
-                    if let error = error {
-                        /// 4: Handle possible errors
-                        print(error)
-                    }
-                }
-                
-//                MARK: Use as a reference on how to print a list of all users
-                let controller = ChatClient.shared.userListController(
-                    query: .init()
-                )
-                controller.synchronize { error in
-                    if let error = error {
-                        // handle error
-                        print("err")
-                        print(error)
-                    } else {
-                        // access users
-                        print("succ")
-                        print(controller.users)
-                        print(controller.users.forEach { user in
-                            print(user.id)
-                        })
-                    }
-                }
->>>>>>> main
     }
     
     
