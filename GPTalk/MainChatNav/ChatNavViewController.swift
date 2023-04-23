@@ -53,11 +53,24 @@ class MainChatNav: ChatChannelListVC {
         present(alertController, animated: true)
     }
     
+<<<<<<< Updated upstream
     // functionality to create new chats. Popup whre the user can enter a name of another user to create a chat with them
     
     @objc func addTapped() {
         let alert = UIAlertController(title: "Create new chat", message: "Enter the username of the user you want to chat with", preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
+=======
+    private func createChat(with usernames: [String]) {
+        printAllUsers()
+        // Use the `ChatClient` to create a `ChatChannelController` with a list of user ids
+        let channelController = try? ChatClient.shared.channelController(
+            createDirectMessageChannelWith: Set(usernames),
+            isCurrentUserMember: true,
+            name: nil,
+            imageURL: nil,
+            extraData: ["test": "test"]
+        )
+>>>>>>> Stashed changes
 
         let createAction = UIAlertAction(title: "Create", style: .default) { _ in
             guard let username = alert.textFields?.first?.text else { return }
