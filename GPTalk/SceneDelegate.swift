@@ -7,6 +7,8 @@
 
 import UIKit
 import StreamChat
+import StreamChatUI
+import OpenAIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
@@ -44,7 +46,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let userId = (User.current?.username)!
 
         ChatClient.shared = ChatClient(config: config)
-
+        Components.default.channelVC = ChatViewController.self
         
         ChatClient.shared.connectUser(
             userInfo: UserInfo(
