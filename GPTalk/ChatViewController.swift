@@ -49,7 +49,10 @@ class ChatViewController: ChatChannelVC {
             storeMessage(event: event)
             if (event.message.text.lowercased().contains("@gpt")) {
                 Task {
-                    let gptMessage = await queryGPT(triggerMessage: event.message)
+                    //query GPT
+                    var gptMessage = await queryGPT(triggerMessage: event.message)
+                    gptMessage = "** GPT **\n\n" + gptMessage
+                    //send message
                     let channelController = ChatClient.shared.channelController(for: event.channel.cid)
                     channelController.createNewMessage(text: gptMessage) { result in
                         switch result {
