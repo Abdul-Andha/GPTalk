@@ -24,7 +24,7 @@ class ChatViewController: ChatChannelVC {
         let systemMessage = """
             {
                 "role": "system",
-                "content": "You are a text message assistant. Users will text each other and when they mention you, you will respond appropriately"
+                "content": "You are a text message assistant. Users will text each other and when they mention you, you will respond appropriately. You will receive role, content, and author of each message. Use this information appropriately."
             }
         """
 
@@ -42,9 +42,11 @@ class ChatViewController: ChatChannelVC {
     }
     
     override func eventsController(_ controller: EventsController, didReceiveEvent event: Event) {
+        
         // Handle any event received
         switch event {
         case let event as MessageNewEvent:
+            storeMessage(event: event)
             if (event.message.text.lowercased().contains("@gpt")) {
                 Task {
                     let gptMessage = await queryGPT(triggerMessage: event.message)
@@ -57,21 +59,6 @@ class ChatViewController: ChatChannelVC {
                             print(error)
                         }
                     }
-                }
-            } else {
-                let newMessage = """
-                    {
-                        "role": "user",
-                        "content": "\(event.message.text)"
-                    }
-                """
-                let data = newMessage.data(using: .utf8)!
-                let decoder = JSONDecoder()
-                do {
-                    let message = try decoder.decode(Chat.Message.self, from: data)
-                    chatMessages.append(message)
-                } catch {
-                    print("Error decoding message: \(error)")
                 }
             }
         default:
@@ -91,6 +78,25 @@ class ChatViewController: ChatChannelVC {
             print(error)
         }
         return "GPT Error: Please try again"
+    }
+    
+    func storeMessage(event: MessageNewEvent) {
+        let newMessage = """
+            {
+                "role": "user",
+                "content": "\(event.message.text)",
+                "author": "\(event.message.author.name!)"
+            }
+        """
+        
+        let data = newMessage.data(using: .utf8)!
+        let decoder = JSONDecoder()
+        do {
+            let message = try decoder.decode(Chat.Message.self, from: data)
+            chatMessages.append(message)
+        } catch {
+            print("Error decoding message: \(error)")
+        }
     }
 }
 
