@@ -50,9 +50,6 @@ class MainChatNav: ChatChannelListVC {
             guard let username = alertController.textFields?.first?.text else {
                 return
             }
-            // TODO: Create a new chat with the specified user
-            print("Creating chat with user \(username)")
-            
             
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
