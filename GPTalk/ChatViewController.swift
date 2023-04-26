@@ -17,6 +17,7 @@ class ChatViewController: ChatChannelVC {
     var chatMessages: [Chat.Message] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         eventsController = client.eventsController()
         eventsController.delegate = self
         chatMessages = []
@@ -24,7 +25,7 @@ class ChatViewController: ChatChannelVC {
         let systemMessage = """
             {
                 "role": "system",
-                "content": "You are a text message assistant. Users will text each other and when they mention you, you will respond appropriately. You will receive role, content, and author of each message. Use this information appropriately."
+                "content": "You are a text message assistant powered by GPT-4. Users will text each other and when they mention you, you will respond appropriately. You will receive role, content, and author of each message. Use this information appropriately."
             }
         """
 
@@ -42,16 +43,16 @@ class ChatViewController: ChatChannelVC {
     }
     
     override func eventsController(_ controller: EventsController, didReceiveEvent event: Event) {
-        
         // Handle any event received
         switch event {
         case let event as MessageNewEvent:
             storeMessage(event: event)
-            if (event.message.text.lowercased().contains("@gpt")) {
+            print(client.currentUserId)
+            if (event.message.text.lowercased().contains("@gpt") && (event.message.author.id == client.currentUserId)) {
                 Task {
                     //query GPT
                     var gptMessage = await queryGPT(triggerMessage: event.message)
-                    gptMessage = "** GPT **\n\n" + gptMessage
+                    gptMessage = "** 🤖GPT🤖 **\n\n" + gptMessage
                     //send message
                     let channelController = ChatClient.shared.channelController(for: event.channel.cid)
                     channelController.createNewMessage(text: gptMessage) { result in
