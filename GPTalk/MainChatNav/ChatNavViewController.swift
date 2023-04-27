@@ -15,15 +15,22 @@ class MainChatNav: ChatChannelListVC {
         super.setUpAppearance()
         title = "Chats"
         
+        // Get the current user's username
+        guard let username = ChatClient.shared.currentUserId else {
+            return
+        }
+        
+        // Create a label with the username
+        let usernameLabel = UILabel()
+        usernameLabel.text = username
+        
+        // Add the label to the navigation bar
+        let leftBarButtonItem = UIBarButtonItem(customView: usernameLabel)
+        navigationItem.leftBarButtonItem = leftBarButtonItem
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus.app.fill"), style: .plain, target: self, action: #selector(addChat))
         
-        // Add the username label to the navigation bar
-       let usernameLabel = UILabel()
-       usernameLabel.text = ChatClient.shared.currentUserId
-       usernameLabel.font = UIFont.boldSystemFont(ofSize: 18)
-       usernameLabel.sizeToFit()
-       let usernameItem = UIBarButtonItem(customView: usernameLabel)
-       navigationItem.leftBarButtonItem = usernameItem
+        
         
         // Create the logout button
         let logoutButton = UIButton(type: .system)
