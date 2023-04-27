@@ -9,6 +9,7 @@ import UIKit
 import ParseSwift
 
 
+
 class ForgotPasswordViewController: UIViewController {
 
     
@@ -29,8 +30,6 @@ class ForgotPasswordViewController: UIViewController {
                 return
         }
         
-    
-
         User.passwordReset(email: email) { [weak self] result in
 
             switch result {

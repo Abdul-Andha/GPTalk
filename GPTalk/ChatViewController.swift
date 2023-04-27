@@ -47,7 +47,7 @@ class ChatViewController: ChatChannelVC {
         switch event {
         case let event as MessageNewEvent:
             storeMessage(event: event)
-            print(client.currentUserId)
+//            print(client.currentUserId)
             if (event.message.text.lowercased().contains("@gpt") && (event.message.author.id == client.currentUserId)) {
                 Task {
                     //query GPT
