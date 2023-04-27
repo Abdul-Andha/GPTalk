@@ -17,6 +17,14 @@ class MainChatNav: ChatChannelListVC {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus.app.fill"), style: .plain, target: self, action: #selector(addChat))
         
+        // Add the username label to the navigation bar
+       let usernameLabel = UILabel()
+       usernameLabel.text = ChatClient.shared.currentUserId
+       usernameLabel.font = UIFont.boldSystemFont(ofSize: 18)
+       usernameLabel.sizeToFit()
+       let usernameItem = UIBarButtonItem(customView: usernameLabel)
+       navigationItem.leftBarButtonItem = usernameItem
+        
         // Create the logout button
         let logoutButton = UIButton(type: .system)
         logoutButton.setTitle("Logout", for: .normal)
