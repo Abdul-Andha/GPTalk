@@ -8,14 +8,19 @@
 import UIKit
 import StreamChat
 import StreamChatUI
+import Alamofire
+import AlamofireImage
+
 
 
 class MainChatNav: ChatChannelListVC {
     override open func setUpAppearance() {
         super.setUpAppearance()
         title = "Chats"
-        
+        self.router = CustomChatChannelListRouter(rootViewController: self)
+      
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus.app.fill"), style: .plain, target: self, action: #selector(addChat))
+
         
         // Create the logout button
         let logoutButton = UIButton(type: .system)
@@ -32,6 +37,9 @@ class MainChatNav: ChatChannelListVC {
         view.addSubview(logoutButton)
     }
     
+    open func showCurrentUserProfile(){
+        printAllUsers()
+    }
     @objc private func addChat() {
         let alertController = UIAlertController(title: "Create New Chat", message: "Enter the name of the users you want to chat with. Make sure to separate multiple users by commas.", preferredStyle: .alert)
         alertController.addTextField { textField in
@@ -105,6 +113,10 @@ class MainChatNav: ChatChannelListVC {
         
         
         
+    
+    
+    
+    
         //logout button code starts here
         @objc func onLogOutTapped(_ sender: Any) {
             showConfirmLogoutAlert()
@@ -121,4 +133,3 @@ class MainChatNav: ChatChannelListVC {
             present(alertController, animated: true)
         }
     }
-
