@@ -110,13 +110,7 @@ class MainChatNav: ChatChannelListVC {
                 }
             }
         }
-        
-        
-        
-    
-    
-    
-    
+
         //logout button code starts here
         @objc func onLogOutTapped(_ sender: Any) {
             showConfirmLogoutAlert()
