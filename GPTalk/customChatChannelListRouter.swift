@@ -18,5 +18,14 @@ class CustomChatChannelListRouter: ChatChannelListRouter  {
             rootViewController.present(profileViewController, animated: true)
     }
     
+    override func didTapDeleteButton(for cid: ChannelId) {
+        let controller = ChatClient.shared.channelController(for: cid)
+        controller.deleteChannel { error in
+            if let error = error {
+                print(error)
+            }
+        }
+    }
+    
 }
 
