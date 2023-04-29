@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A01BD2FE29FC67D300256A83 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = A01BD2FD29FC67D300256A83 /* Nuke */; };
-		A01BD30029FC67D300256A83 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = A01BD2FF29FC67D300256A83 /* NukeUI */; };
 		A08216C229FAE77A004BAF2B /* customChatChannelListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08216C129FAE77A004BAF2B /* customChatChannelListRouter.swift */; };
 		A0A04DB029E9E68900E53E7C /* Inter in Resources */ = {isa = PBXBuildFile; fileRef = A0A04DAF29E9E68900E53E7C /* Inter */; };
 		A0A04DB229E9E95600E53E7C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A04DB129E9E95600E53E7C /* SignUpViewController.swift */; };
@@ -32,6 +30,7 @@
 		F46D347729E89C4E00E34C9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46D347529E89C4E00E34C9F /* LaunchScreen.storyboard */; };
 		F46D34A929EC7E3400E34C9F /* StreamChat in Frameworks */ = {isa = PBXBuildFile; productRef = F46D34A829EC7E3400E34C9F /* StreamChat */; };
 		F46D34AB29EC7E3400E34C9F /* StreamChatUI in Frameworks */ = {isa = PBXBuildFile; productRef = F46D34AA29EC7E3400E34C9F /* StreamChatUI */; };
+		F4E47BDF29FD741F000457D1 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = F4E47BDE29FD741F000457D1 /* Nuke */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,12 +62,11 @@
 			files = (
 				A0A04DB829E9ED9300E53E7C /* ParseSwift in Frameworks */,
 				F46D34AB29EC7E3400E34C9F /* StreamChatUI in Frameworks */,
-				A01BD2FE29FC67D300256A83 /* Nuke in Frameworks */,
+				F4E47BDF29FD741F000457D1 /* Nuke in Frameworks */,
 				BF3C384C29EB27FF009F3454 /* Alamofire in Frameworks */,
 				F46D34A929EC7E3400E34C9F /* StreamChat in Frameworks */,
 				BF3C384F29EB280B009F3454 /* AlamofireImage in Frameworks */,
 				F44ED0D929F445E800DDBDDF /* OpenAIKit in Frameworks */,
-				A01BD30029FC67D300256A83 /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,8 +161,7 @@
 				F46D34A829EC7E3400E34C9F /* StreamChat */,
 				F46D34AA29EC7E3400E34C9F /* StreamChatUI */,
 				F44ED0D829F445E800DDBDDF /* OpenAIKit */,
-				A01BD2FD29FC67D300256A83 /* Nuke */,
-				A01BD2FF29FC67D300256A83 /* NukeUI */,
+				F4E47BDE29FD741F000457D1 /* Nuke */,
 			);
 			productName = GPTalk;
 			productReference = F46D346729E89C4C00E34C9F /* GPTalk.app */;
@@ -200,7 +197,7 @@
 				BF3C384D29EB280B009F3454 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 				F46D34A729EC7E3400E34C9F /* XCRemoteSwiftPackageReference "stream-chat-swift" */,
 				F44ED0D729F445E800DDBDDF /* XCRemoteSwiftPackageReference "openai-kit" */,
-				A01BD2FC29FC67D300256A83 /* XCRemoteSwiftPackageReference "Nuke" */,
+				F4E47BDD29FD741F000457D1 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = F46D346829E89C4C00E34C9F /* Products */;
 			projectDirPath = "";
@@ -462,14 +459,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A01BD2FC29FC67D300256A83 /* XCRemoteSwiftPackageReference "Nuke" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kean/Nuke.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 12.0.0;
-			};
-		};
 		A0A04DB629E9ED9300E53E7C /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/parse-community/Parse-Swift";
@@ -510,19 +499,17 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		F4E47BDD29FD741F000457D1 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = exactVersion;
+				version = 9.6.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A01BD2FD29FC67D300256A83 /* Nuke */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A01BD2FC29FC67D300256A83 /* XCRemoteSwiftPackageReference "Nuke" */;
-			productName = Nuke;
-		};
-		A01BD2FF29FC67D300256A83 /* NukeUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A01BD2FC29FC67D300256A83 /* XCRemoteSwiftPackageReference "Nuke" */;
-			productName = NukeUI;
-		};
 		A0A04DB729E9ED9300E53E7C /* ParseSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A0A04DB629E9ED9300E53E7C /* XCRemoteSwiftPackageReference "Parse-Swift" */;
@@ -552,6 +539,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F46D34A729EC7E3400E34C9F /* XCRemoteSwiftPackageReference "stream-chat-swift" */;
 			productName = StreamChatUI;
+		};
+		F4E47BDE29FD741F000457D1 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4E47BDD29FD741F000457D1 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
