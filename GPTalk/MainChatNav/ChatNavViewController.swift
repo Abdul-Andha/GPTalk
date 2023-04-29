@@ -18,23 +18,9 @@ class MainChatNav: ChatChannelListVC {
         super.setUpAppearance()
         title = "Chats"
         self.router = CustomChatChannelListRouter(rootViewController: self)
-      
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus.app.fill"), style: .plain, target: self, action: #selector(addChat))
 
-        
-        // Create the logout button
-        let logoutButton = UIButton(type: .system)
-        logoutButton.setTitle("Logout", for: .normal)
-        logoutButton.backgroundColor = .systemBlue
-        logoutButton.setTitleColor(.white, for: .normal)
-        logoutButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        logoutButton.addTarget(self, action: #selector(onLogOutTapped), for: .touchUpInside)
-        
-        // Set the frame of the logout button
-        logoutButton.frame = CGRect(x: 0, y: view.bounds.height - 50, width: view.bounds.width, height: 50)
-        
-        // Add the logout button to the view
-        view.addSubview(logoutButton)
     }
     
     open func showCurrentUserProfile(){
