@@ -8,15 +8,20 @@
 import UIKit
 import StreamChat
 import StreamChatUI
+import Nuke
+import ParseSwift
 
 class ProfileViewController: UIViewController {
     
-    
     private let imageView: UIImageView = {
+        var currentUser = ChatClient.shared.currentUserController().currentUser!
+        
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(systemName: "person.circle")
+        let loadedImage: UIImageView
+        Nuke.loadImage(with: currentUser.imageURL!, into: imageView)
         imageView.contentMode = .scaleAspectFit
+        imageView.layer.cornerRadius = 100
         return imageView
     }()
     
@@ -63,16 +68,16 @@ class ProfileViewController: UIViewController {
         return sendButton
     }()
     
-    private let passwordTextField: UITextField = {
-       let passwordTextField = UITextField()
-        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
-        passwordTextField.placeholder = "Email"
-        passwordTextField.backgroundColor = .systemGray6
-        passwordTextField.autocapitalizationType = .none
-        passwordTextField.layer.cornerRadius = 5
-
-        return passwordTextField
-    }()
+//    private let passwordTextField: UITextField = {
+//       let passwordTextField = UITextField()
+//        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
+//        passwordTextField.placeholder = "Email"
+//        passwordTextField.backgroundColor = .systemGray6
+//        passwordTextField.autocapitalizationType = .none
+//        passwordTextField.layer.cornerRadius = 5
+//
+//        return passwordTextField
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +86,7 @@ class ProfileViewController: UIViewController {
         view.addSubview(imageView)
         view.addSubview(usernameLabel)
         view.addSubview(passwordLabel)
-        view.addSubview(passwordTextField)
+//        view.addSubview(passwordTextField)
         view.addSubview(sendButton)
         view.addSubview(signoutButton)
         
@@ -109,8 +114,8 @@ class ProfileViewController: UIViewController {
     
     private func addConstraints(){
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: 100),
-            imageView.heightAnchor.constraint(equalToConstant: 100),
+            imageView.widthAnchor.constraint(equalToConstant: 125),
+            imageView.heightAnchor.constraint(equalToConstant: 125),
             imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
        
@@ -122,15 +127,15 @@ class ProfileViewController: UIViewController {
             passwordLabel.heightAnchor.constraint(equalToConstant: 30),
             passwordLabel.topAnchor.constraint(equalTo: usernameLabel.bottomAnchor, constant: 20),
             
-            passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            passwordTextField.heightAnchor.constraint(equalToConstant: 50),
-            passwordTextField.widthAnchor.constraint(equalToConstant: 250),
-            passwordTextField.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 0),
+//            passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            passwordTextField.heightAnchor.constraint(equalToConstant: 50),
+//            passwordTextField.widthAnchor.constraint(equalToConstant: 250),
+//            passwordTextField.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 0),
             
             sendButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             sendButton.heightAnchor.constraint(equalToConstant: 50),
             sendButton.widthAnchor.constraint(equalToConstant: 200),
-            sendButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
+            sendButton.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 20),
             
             signoutButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             signoutButton.heightAnchor.constraint(equalToConstant: 50),
@@ -141,19 +146,15 @@ class ProfileViewController: UIViewController {
     }
     
     @objc func onSendTapped(_ sender: Any) {
-            guard let email = passwordTextField.text,
-                  !email.isEmpty else {
-                showMissingFieldsAlert()
-                return
-        }
+        let email = User.current!.email ?? ""
         
-        User.passwordReset(email: email) { [weak self] result in
+        User.passwordReset(email: User.current!.email!) { [weak self] result in
             
             switch result {
             case .success:
                 print("✅ Successfully sent email to \(email)")
 
-                self?.showConfirmation(description: "If you can't find your email, please check your email and try again")
+                self?.showConfirmation(description: "Email sent to \(email). If you can't find it, please check your spam folder and try again")
 
             case .failure(let error):
                 
