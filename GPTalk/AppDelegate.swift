@@ -54,7 +54,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setTheme() {
-        Appearance.default.colorPalette.background = UIColor(white: 0, alpha: 0.9)
         
         //read check marks
         Appearance.default.colorPalette.accentPrimary = .systemMint
@@ -82,15 +81,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //reactions on other user msgs
         Appearance.default.colorPalette.background2 = UIColor(white: 0.1, alpha: 0.9)
-
-        //user text background
-        Appearance.default.colorPalette.background6 = UIColor(white: 0.1, alpha: 0.9)
-
-        //other user text background
-        Appearance.default.colorPalette.background8 = UIColor(white: 0.2, alpha: 0.9)
-
-        //text color and title of channel
-        Appearance.default.colorPalette.text = .white
         
         Appearance.default.colorPalette.inactiveTint = .systemMint
         Appearance.default.colorPalette.alternativeInactiveTint = .systemMint
