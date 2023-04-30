@@ -11,6 +11,7 @@ import StreamChat
 import OpenAIKit
 import AsyncHTTPClient
 import NIO
+import StreamChatUI
  
 extension ChatClient {
     static var shared: ChatClient!
@@ -48,8 +49,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let configuration = Configuration(apiKey: openAiApiKey, organization: openAiOrganization)
 
         AppDelegate.openAIClient = OpenAIKit.Client(httpClient: httpClient, configuration: configuration)
-        
+        setTheme()
         return true
+    }
+    
+    func setTheme() {
+        Appearance.default.colorPalette.background = UIColor(white: 0, alpha: 0.9)
+        
+        //read check marks
+        Appearance.default.colorPalette.accentPrimary = .systemMint
+        
+        //delete button
+        Appearance.default.colorPalette.alert = .red
+        
+        //separator between channels
+        Appearance.default.colorPalette.border = .systemGray2
+        
+        //highlight on channel click
+        Appearance.default.colorPalette.highlightedBackground = UIColor(white: 0.25, alpha: 0.8)
+        
+        //border around texts
+        Appearance.default.colorPalette.border3 = .darkGray
+        
+        //shadow around various components in the app
+        Appearance.default.colorPalette.shadow = .darkGray
+        
+        //date at the top when scrolling in a channel
+        Appearance.default.colorPalette.staticColorText = .white
+    
+        //reaction on current user's msgs and instant commands popover
+        Appearance.default.colorPalette.popoverBackground = UIColor(white: 0.2, alpha: 0.9)
+        
+        //reactions on other user msgs
+        Appearance.default.colorPalette.background2 = UIColor(white: 0.1, alpha: 0.9)
+
+        //user text background
+        Appearance.default.colorPalette.background6 = UIColor(white: 0.1, alpha: 0.9)
+
+        //other user text background
+        Appearance.default.colorPalette.background8 = UIColor(white: 0.2, alpha: 0.9)
+
+        //text color and title of channel
+        Appearance.default.colorPalette.text = .white
+        
+        Appearance.default.colorPalette.inactiveTint = .systemMint
+        Appearance.default.colorPalette.alternativeInactiveTint = .systemMint
+        
+        
     }
 
     // MARK: UISceneSession Lifecycle
