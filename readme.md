@@ -26,7 +26,7 @@ GPTalk is a messaging app that allows the user to converse with ChatGPT in the m
 **Required Must-have Stories**
 
 * Log-in
-	* Sign-up
+* Sign-up
 * Forget password
 * Main page, with all chats
 * Search bar at the top
@@ -72,10 +72,7 @@ GPTalk is a messaging app that allows the user to converse with ChatGPT in the m
    
 * Main Chat Navigation Screen
    * All individual chats 
-   * A search bar 
-   * Add / block friends 
-   * Create a new chat
-   * Tab for recent calls
+   * Create/delete chats
    * Logout
   
 * Chat screen
@@ -83,16 +80,12 @@ GPTalk is a messaging app that allows the user to converse with ChatGPT in the m
    * Choose camera 
    * Choose image / file
    * Send message button
-   * GPT commands “/GPT” 
-   * Add a ‘GPT’ button to the users keyboard
-   * Call Button / Video Call Button 
+   * GPT commands “@GPT” 
+   * Reactions
+   * Replies
  
 
 ### 3. Navigation
-
-**Tab Navigation** (Tab to Screen)
-* Main Chat Navigation
-* Recent Calls
 
 **Flow Navigation** (Screen to Screen)
 * Log In
@@ -109,12 +102,11 @@ GPTalk is a messaging app that allows the user to converse with ChatGPT in the m
 
 *  Main Chat Navigation 
 	* Chat Screen
-	* Log in (logout button)
-	* Call tab
+	* Log in
+	* 
 
 * Chat Screen
 	* Main Chat Navigation
-
 
 
 ## Wireframes
@@ -123,12 +115,5 @@ GPTalk is a messaging app that allows the user to converse with ChatGPT in the m
 <img src="wireframes/wireframe2.png" width=600>
 
 
-
-## Schema 
-[This section will be completed in Unit 9]
-### Models
-[Add table of models]
-### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+## Demo
+<img src="demo.gif">
