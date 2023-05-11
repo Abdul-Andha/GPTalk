@@ -31,8 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        ParseSwift.initialize(applicationId: "cl8uCfaV8ErbUUk1wqaQhPtrdurFNiI4VTGYeXMp",
-                              clientKey: "WInTTsIpVpoBUcZaXkAorvL2BeGZf2QQVGWU003h",
+        ParseSwift.initialize(applicationId: PARSE_APP_KEY,
+                              clientKey: PARSE_CLIENT_KEY,
                               serverURL: URL(string: "https://parseapi.back4app.com")!)
         
         
@@ -40,13 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let httpClient = HTTPClient(eventLoopGroupProvider: .shared(eventLoopGroup))
 
-//        defer {
-//            // it's important to shutdown the httpClient after all requests are done, even if one failed. See: https://github.com/swift-server/async-http-client
-//            try? httpClient.syncShutdown()
-//        }
-        let openAiApiKey = "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"
-        let openAiOrganization = "org-KhOXBCAXsTyodJZ22nH1moHh"
-        let configuration = Configuration(apiKey: openAiApiKey, organization: openAiOrganization)
+        let configuration = Configuration(apiKey: OPEN_AI_API_KEY, organization: OPEN_AI_ORGANIZATION)
 
         AppDelegate.openAIClient = OpenAIKit.Client(httpClient: httpClient, configuration: configuration)
         setTheme()

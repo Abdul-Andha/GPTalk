@@ -21,7 +21,7 @@
 		BF3C384F29EB280B009F3454 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = BF3C384E29EB280B009F3454 /* AlamofireImage */; };
 		F44ED0D629F43DE700DDBDDF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ED0D529F43DE700DDBDDF /* ChatViewController.swift */; };
 		F44ED0D929F445E800DDBDDF /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = F44ED0D829F445E800DDBDDF /* OpenAIKit */; };
-		F44ED0DD29F4473100DDBDDF /* .env in Resources */ = {isa = PBXBuildFile; fileRef = F44ED0DC29F4473100DDBDDF /* .env */; };
+		F45604642A0D5CF500224768 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45604632A0D5CF500224768 /* Constants.swift */; };
 		F46D346B29E89C4C00E34C9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D346A29E89C4C00E34C9F /* AppDelegate.swift */; };
 		F46D346D29E89C4C00E34C9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D346C29E89C4C00E34C9F /* SceneDelegate.swift */; };
 		F46D346F29E89C4C00E34C9F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D346E29E89C4C00E34C9F /* LoginViewController.swift */; };
@@ -44,7 +44,7 @@
 		BF3C384629EB1C64009F3454 /* ChatNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNavViewController.swift; sourceTree = "<group>"; };
 		BF3C384829EB26FA009F3454 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		F44ED0D529F43DE700DDBDDF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		F44ED0DC29F4473100DDBDDF /* .env */ = {isa = PBXFileReference; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
+		F45604632A0D5CF500224768 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F46D346729E89C4C00E34C9F /* GPTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46D346A29E89C4C00E34C9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F46D346C29E89C4C00E34C9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 				A0A04DB529E9E99200E53E7C /* Login */,
 				BF3C384329EAF745009F3454 /* MainChatNav */,
 				F44ED0D529F43DE700DDBDDF /* ChatViewController.swift */,
-				F44ED0DC29F4473100DDBDDF /* .env */,
+				F45604632A0D5CF500224768 /* Constants.swift */,
 				F46D347029E89C4C00E34C9F /* Main.storyboard */,
 				A0A04DAF29E9E68900E53E7C /* Inter */,
 				F46D347329E89C4E00E34C9F /* Assets.xcassets */,
@@ -213,7 +213,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F44ED0DD29F4473100DDBDDF /* .env in Resources */,
 				A0A04DB029E9E68900E53E7C /* Inter in Resources */,
 				F46D347729E89C4E00E34C9F /* LaunchScreen.storyboard in Resources */,
 				F46D347429E89C4E00E34C9F /* Assets.xcassets in Resources */,
@@ -235,6 +234,7 @@
 				BF3C384729EB1C64009F3454 /* ChatNavViewController.swift in Sources */,
 				F46D346B29E89C4C00E34C9F /* AppDelegate.swift in Sources */,
 				BF3C384229EAF719009F3454 /* Messages.swift in Sources */,
+				F45604642A0D5CF500224768 /* Constants.swift in Sources */,
 				A0F0959729FACDB200580911 /* profileViewController.swift in Sources */,
 				A0A04DB229E9E95600E53E7C /* SignUpViewController.swift in Sources */,
 				A0D3C32329E9F4D700790A35 /* Users.swift in Sources */,

@@ -45,7 +45,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
     }
     private func login() {        
-        let config = ChatClientConfig(apiKey: .init("whj3d684u4wv"))
+        let config = ChatClientConfig(apiKey: .init(STREAM_KEY))
 
         let userId = (User.current?.username)!
 
