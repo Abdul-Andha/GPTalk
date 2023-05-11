@@ -7,8 +7,8 @@
 2. [Schema](#Schema)
 
 ## Overview
-### Description
-GPTalk is a messaging app that allows the user to converse with ChatGPT in the middle of their conversations utilizing the OpenAI API. 
+### App Description
+GPTalk is an iOS text messaging app that allows the user to converse with GPT-4 in the middle of their conversations utilizing the OpenAI API. 
 
 ### App Evaluation
 
