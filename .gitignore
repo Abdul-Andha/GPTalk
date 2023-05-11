@@ -10,7 +10,7 @@
 # Icon must end with two \r
 Icon
 
-GPTalk/Constants.swift
+
 
 # Thumbnails
 ._*
@@ -133,3 +133,4 @@ iOSInjectionProject/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,xcode,swift
+GPTalk/Constants.swift
