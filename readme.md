@@ -10,6 +10,9 @@
 ### Description
 GPTalk is a messaging app that allows the user to converse with ChatGPT in the middle of their conversations utilizing the OpenAI API. 
 
+## Demo
+<img src="assets/demo.gif">
+
 ### App Evaluation
 
 - **Category:** Messaging
@@ -113,7 +116,3 @@ GPTalk is a messaging app that allows the user to converse with ChatGPT in the m
 
 <img src="wireframes/wireframe.png" width=600>
 <img src="wireframes/wireframe2.png" width=600>
-
-
-## Demo
-<img src="demo.gif">
