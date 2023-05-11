@@ -13,6 +13,12 @@ GPTalk is an iOS text messaging app that allows the user to converse with GPT-4 
 ## Demo
 <img src="assets/demo.gif">
 
+## Instructions
+To run the app, follow these steps:
+    - Git clone this repo
+    - Add the appropriate API keys to Constants.swift
+    - Run
+
 ### App Evaluation
 
 - **Category:** Messaging
